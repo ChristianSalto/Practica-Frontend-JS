@@ -1,0 +1,112 @@
+body {
+    background: #2c7873;
+    margin    : 0px;
+}
+
+img {
+    margin-top: 75px;
+}
+
+/*----nav----*/
+.conteiner-nav {
+    display       : flex;
+    flex-direction: row;
+    position      : fixed;
+    width         : 100%;
+    background    : #2c7873;
+}
+
+.div-title {
+    width       : 30%;
+    padding-left: 5%;
+    color       : #ffba5a;
+    font-family : 'Chewy', cursive;
+}
+
+.div-form {
+    width      : 50%;
+    align-self : center;
+    padding    : 10px;
+    margin-left: 10%;
+}
+
+.input-search {
+    position     : fixed;
+    width        : 30%;
+    margin-left  : 10%;
+    border-radius: 5px;
+    background   : #2c7873;
+    border       : 1px solid #569949;
+    height       : 20px;
+    padding      : 3px;
+    outline      : none;
+}
+
+::placeholder {
+    color: rgb(173, 168, 168);
+}
+
+.button-search {
+    position     : relative;
+    color        : #ffba5a;
+    border-radius: 5px;
+    background   : #2c7873;
+    border       : 0px;
+    margin-left  : 70%;
+    width        : 18px;
+    height       : 18px;
+    margin-top   : 5px;
+    outline      : none;
+}
+
+@media (min-width: 550px) {
+    .button-search {
+        margin-left: 72%;
+    }
+}
+
+@media (min-width: 700px) {
+    .button-search {
+        margin-left: 74%;
+    }
+
+    .input-search {
+        width      : 25%;
+        margin-left: 15%;
+    }
+}
+
+@media (min-width: 900px) {
+    .button-search {
+        width      : 20px;
+        height     : 20px;
+        margin-top : 8px;
+        margin-left: 75%;
+    }
+
+    .input-search {
+        height: 25px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .button-search {
+        width      : 25px;
+        height     : 25px;
+        margin-left: 88%;
+    }
+
+    .input-search {
+        height     : 30px;
+        width      : 28%;
+        margin-left: 18%;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+}

@@ -1,0 +1,26 @@
+main {
+    display  : inline-flex;
+    flex-wrap: wrap;
+}
+
+/*.show-section {
+    border       : 5px solid rgb(73, 72, 72);
+    padding      : 10px;
+    margin       : 10px;
+    width        : 250px;
+    border-radius: 10px;
+}
+
+.name-beer {
+    color     : #ffbc5e;
+    text-align: center;
+}*/
+
+li>a {
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+li>a:hover {
+    color: #ffba5a;
+}
