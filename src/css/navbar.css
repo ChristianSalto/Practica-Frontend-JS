@@ -59,6 +59,10 @@ img {
     outline      : none;
 }
 
+.button-search:hover {
+    color: #52de97;
+}
+
 @media (min-width: 550px) {
     .button-search {
         margin-left: 72%;

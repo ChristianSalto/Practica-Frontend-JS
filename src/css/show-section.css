@@ -3,24 +3,87 @@ main {
     flex-wrap: wrap;
 }
 
-/*.show-section {
-    border       : 5px solid rgb(73, 72, 72);
-    padding      : 10px;
-    margin       : 10px;
-    width        : 250px;
-    border-radius: 10px;
+li {
+    margin-top   : 20px;
+    margin-bottom: 40px;
 }
-
-.name-beer {
-    color     : #ffbc5e;
-    text-align: center;
-}*/
 
 li>a {
     text-decoration: none;
-    margin-left: 5px;
+    margin-left    : 5px;
 }
 
 li>a:hover {
     color: #ffba5a;
 }
+
+
+/*--- Details ---*/
+
+.main-section {
+    width       : 50%;
+    min-width   : 340px;
+    margin-right: 50px;
+    margin-top  : 80px;
+    margin-left : 10px;
+}
+
+.img-section {
+    width      : fit-content;
+    height     : fit-content;
+    margin-left: 70px;
+    margin-top : -50px;
+}
+
+.details-section {
+    background   : rgb(110, 108, 110);
+    width        : 100%;
+    padding      : 5px;
+    border-radius: 10px;
+    margin       : 5px;
+
+}
+
+.title-section {
+    text-align : center;
+    font-family: 'Chewy', cursive;
+    color      : #52de97;
+    margin-top : 50px;
+}
+
+.description-section {
+    padding  : 10px;
+    width    : 90%;
+    min-width: 290px;
+}
+
+.description-section>p {
+    color      : blanchedalmond;
+    margin-left: 5px;
+    padding    : 10px;
+}
+
+.extra-content {
+    min-width: 360px;
+    width    : 60%;
+    padding  : 10px;
+}
+
+.extra-content>dl>dd {
+    color  : blanchedalmond;
+    padding: 9px;
+    margin : 10px;
+}
+
+.text-comments {
+    background-color: rgb(110, 108, 110);
+    color           : blanchedalmond;
+    padding         : 10px;
+    margin-top      : 40px;
+    resize          : none;
+    border-radius   : 10px;
+    outline         : none;
+    width           : 300px;
+}
+
+/*(120deg, #ffba5a, #569949, #52de97, #2c7873);*/

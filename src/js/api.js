@@ -39,6 +39,20 @@ const api = () => {
                 console.error(err.message);
                 throw err;
             }
+        },
+
+        getShowDetails: id => {
+            return fetch(`https://beerflix-api.herokuapp.com/api/v1/beers/${id}`, myInit)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Error retrieving show ${id}`)
+                    }
+                    return response.json();
+                })
+                .catch(err => {
+                    console.error(err.message);
+                    throw err;
+                })
         }
     }
 };
