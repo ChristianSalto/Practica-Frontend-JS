@@ -6,15 +6,16 @@ import rendelDetail from './details.js'
 const { getItem } = storage(STORAGE_TYPE);
 
 
-const index = () => {
+page('/main.html', () => {
+    console.log('main')
     renderHomeShows(getItem(INPUT_STORAGE__ID));
-}
-
-page('/main.html', index);
+});
 
 page('/details/:id', (ctx) => {
+    console.log('details')
     const id = parseInt(ctx.params.id);
     rendelDetail(id)
 });
 
 page();
+

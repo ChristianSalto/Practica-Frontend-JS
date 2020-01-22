@@ -28,6 +28,26 @@ li>a:hover {
     margin-left : 10px;
 }
 
+.h3-ingre {
+    margin-left: 10px;
+}
+
+.div-ingredient {
+    border       : 1px solid rgb(85, 81, 81);
+    padding      : 8px;
+    border-radius: 10px;
+}
+
+.div-ingredient>dl>dd {
+    color  : blanchedalmond;
+    padding: 10px;
+    margin : 5px;
+}
+
+.div-ingredient>dl {
+    margin-left: 5px;
+}
+
 .img-section {
     width      : fit-content;
     height     : fit-content;
@@ -64,15 +84,16 @@ li>a:hover {
 }
 
 .extra-content {
-    min-width: 360px;
+    min-width: 320px;
     width    : 60%;
     padding  : 10px;
 }
 
+
 .extra-content>dl>dd {
     color  : blanchedalmond;
     padding: 9px;
-    margin : 10px;
+    margin : 5px;
 }
 
 .text-comments {

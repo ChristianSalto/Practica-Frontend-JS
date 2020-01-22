@@ -60,7 +60,8 @@ img {
 }
 
 .button-search:hover {
-    color: #52de97;
+    color : #52de97;
+    cursor: pointer;
 }
 
 @media (min-width: 550px) {

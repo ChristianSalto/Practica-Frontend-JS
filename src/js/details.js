@@ -1,6 +1,6 @@
 import api from './api.js';
 
-const detailsTemplate = ({ name, description, firstBrewed, brewersTips, price, image } = {}) => `
+const detailsTemplate = ({ name, description, firstBrewed, brewersTips, price, image, ingredients } = {}) => `
 <div class="main-section" id="div-section">
  <div class="details-section">
    <header>
@@ -9,6 +9,17 @@ const detailsTemplate = ({ name, description, firstBrewed, brewersTips, price, i
   <div class="description-section">
     <h3>Description:</h3>
     <p>${description}</p>
+  </div>
+  <h3 class="h3-ingre">Ingredientes: </h3>
+  <div class="div-ingredient" id="show-ingredient">
+    <dl>
+      <dt>Malt: </dt>
+      <dd>${ingredients.malt.map(function (show) { return show.name; }).join(', ')}</dd>
+    </dl>
+    <dl>
+      <dt>Hops: </dt>
+      <dd>${ingredients.hops.map(function (show) { return show.name; }).join(', ')}</dd>
+    </dl>
   </div>
     <div class="extra-content">
      <dl>
@@ -27,17 +38,17 @@ const detailsTemplate = ({ name, description, firstBrewed, brewersTips, price, i
 <div class="img-section">
 <img src="${image}" alt="beer">
 </div>
-`
+`;
 
 const rendelDetail = async id => {
-    try {
-        const detail = await api().getShowDetails(id);
-        const template = detailsTemplate(detail.beer);
-        const divSection = document.querySelector('main');
-        divSection.innerHTML = template;
-    } catch (err) {
-        console.error(err);
-    }
+  try {
+    const detail = await api().getShowDetails(id);
+    const template = detailsTemplate(detail.beer);
+    const divSection = document.querySelector('main');
+    divSection.innerHTML = template;
+  } catch (err) {
+    console.error(err);
+  }
 }
 
 export default rendelDetail;
