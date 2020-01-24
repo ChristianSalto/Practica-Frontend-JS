@@ -52,7 +52,7 @@ li>a:hover {
     width      : fit-content;
     height     : fit-content;
     margin-left: 70px;
-    margin-top : -50px;
+    margin-top : -10px;
 }
 
 .details-section {
@@ -106,5 +106,80 @@ li>a:hover {
     outline         : none;
     width           : 300px;
 }
+
+.input-submit {
+    border-radius   : 10px;
+    color           : rgb(255, 255, 255);
+    background-color: rgb(110, 108, 110);
+    outline         : none;
+    position        : absolute;
+    margin-top      : 7px;
+}
+
+.input-submit:hover {
+    cursor    : pointer;
+    box-shadow: 1px 1px 5px 1px;
+    outline   : none;
+}
+
+.p-comment {
+    margin: 15px;
+    color : #ffba5a;
+}
+
+.button-like {
+    display         : inline-flex;
+    margin-left     : 80%;
+    width           : 30px;
+    height          : 30px;
+    background-image: url(/src/img/like.ico);
+    background-color: rgb(110, 108, 110);
+    border          : 0px;
+    outline         : none;
+}
+
+.button-like:hover {
+    cursor : pointer;
+    outline: none;
+}
+
+.s-likes {
+    position: absolute;
+    margin  : 10px;
+}
+
+@media (min-width: 1102px) {
+    .input-submit {
+        margin-left: -322px;
+        margin-top : 223px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .button-like {
+        margin-left: 73%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .button-like {
+        margin-left: 70%;
+    }
+}
+
+@media (min-width: 1350px) {
+    .button-like {
+        margin-left: 65%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .button-like {
+        margin-left: 60%;
+    }
+}
+
+
+
 
 /*(120deg, #ffba5a, #569949, #52de97, #2c7873);*/

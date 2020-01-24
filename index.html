@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <form action="main.html" class="form-sesion">
+    <form action="main.html" class="form-sesion" id="form-login">
         <h1 class="h1-sesion">Iniciar Sesion</h1>
 
         <div class="div-usuar">
@@ -19,13 +19,14 @@
         </div>
 
         <div class="div-pass">
-            <input type="password" class="input-sesion" placeholder="Contraseña">
+            <input type="email" class="input-sesion" placeholder="Email" id="email">
         </div>
 
         <input type="submit" class="sub" value="Iniciar">
 
         <div class="button-re">
-            ¿No tienes cuenta? <a href="page-registro.html">Registrate</a>
+            ¿No tienes cuenta? <a href="index.html">Registrate</a>
         </div>
     </form>
+    <script type="module" src="/src/js/login.js"></script>
 </body>

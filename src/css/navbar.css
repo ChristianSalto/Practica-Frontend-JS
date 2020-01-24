@@ -53,10 +53,11 @@ img {
     background   : #2c7873;
     border       : 0px;
     margin-left  : 70%;
-    width        : 18px;
+    width        : 25px;
     height       : 18px;
     margin-top   : 5px;
     outline      : none;
+
 }
 
 .button-search:hover {
@@ -83,9 +84,9 @@ img {
 
 @media (min-width: 900px) {
     .button-search {
-        width      : 20px;
-        height     : 20px;
-        margin-top : 8px;
+        width      : 22px;
+        height     : 22px;
+        margin-top : 6px;
         margin-left: 75%;
     }
 

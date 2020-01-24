@@ -52,8 +52,72 @@ const api = () => {
                 .catch(err => {
                     console.error(err.message);
                     throw err;
+                });
+        },
+
+        createComment: (id, text) => {
+            return fetch(`https://beerflix-api.herokuapp.com/api/v1/beers/${id}/comment`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-API-KEY': api_key
+                },
+                body: JSON.stringify({ comment: text })
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Error retrieving show ${id}`)
+                    }
+                    return response.json();
                 })
-        }
+                .catch(err => {
+                    console.error(err.message);
+                    throw err;
+                });
+        },
+
+        createLike: (id) => {
+            return fetch(`https://beerflix-api.herokuapp.com/api/v1/beers/${id}/like`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-API-KEY': api_key
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Error retrieving show ${id}`)
+                    }
+                    return response.json();
+                })
+                .catch(err => {
+                    console.error(err.message);
+                    throw err;
+                });
+        },
+
+        createLogin: (email) => {
+            return fetch(`https://beerflix-api.herokuapp.com/api/v1/user/login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-API-KEY': api_key
+                },
+                body: JSON.stringify({
+                    email: email
+                })
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Error retrieving shows ${email}`);
+                    }
+                    return response.json();
+                })
+                .catch(err => {
+                    console.error(err.message);
+                    throw err;
+                });
+        },
     }
 };
 
