@@ -38,7 +38,7 @@ const detailsTemplate = ({ name, description, firstBrewed, brewersTips, price, i
        </form>
      </div>
      <blockquote class="p-comment"><i>${comments.map(function (show) {
-  return `${show.comment.replace('', '<br>')} ** ${show.dateComment}`;
+    return `${show.comment.replace('', '<br>')} ** ${show.dateComment}`;
 }).join('')}<i></blockquote>
    </div>
 </div>
@@ -48,31 +48,31 @@ const detailsTemplate = ({ name, description, firstBrewed, brewersTips, price, i
 `;
 
 const rendelDetail = async id => {
-  try {
-    const detail = await api().getShowDetails(id);
-    const template = detailsTemplate(detail.beer);
-    const divSection = document.querySelector('main');
-    divSection.innerHTML = template;
-    const commentForm = document.getElementById('comment-form');
-    const textCommment = document.getElementsByClassName('text-comments');
-    const buttonLike = document.getElementById('id-like');
-    commentForm.addEventListener('submit', async (evt) => {
-      evt.preventDefault();
-      if (textCommment[0].value === "") {
-        event.preventDefault()
-      } else {
-        const beerComment = await api().createComment(id, textCommment[0].value);
-        rendelDetail(beerComment.beer.beerId);
-      }
-    });
-    buttonLike.addEventListener('click', async (evt) => {
-      evt.preventDefault();
-      const beerlike = await api().createLike(id)
-      rendelDetail(beerlike.beer.beerId);
-    });
-  } catch (err) {
-    console.error(err);
-  }
+    try {
+        const detail = await api().getShowDetails(id);
+        const template = detailsTemplate(detail.beer);
+        const divSection = document.querySelector('main');
+        divSection.innerHTML = template;
+        const commentForm = document.getElementById('comment-form');
+        const textCommment = document.getElementsByClassName('text-comments');
+        const buttonLike = document.getElementById('id-like');
+        commentForm.addEventListener('submit', async (evt) => {
+            evt.preventDefault();
+            if (textCommment[0].value === "") {
+                event.preventDefault()
+            } else {
+                const beerComment = await api().createComment(id, textCommment[0].value);
+                rendelDetail(beerComment.beer.beerId);
+            }
+        });
+        buttonLike.addEventListener('click', async (evt) => {
+            evt.preventDefault();
+            const beerlike = await api().createLike(id)
+            rendelDetail(beerlike.beer.beerId);
+        });
+    } catch (err) {
+        console.error(err);
+    }
 }
 
 export default rendelDetail;

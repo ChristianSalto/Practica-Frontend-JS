@@ -17,3 +17,5 @@ page('/details/:id', (ctx) => {
 
 page();
 
+
+
