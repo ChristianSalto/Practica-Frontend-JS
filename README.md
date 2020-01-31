@@ -32,4 +32,5 @@ nuestros usuarios.
 Se necesitara de un IDE para poder ejecutar el proyecto y un plugin como Live server o desde node.js
 
 *npm install*
+
 *node server.js*
